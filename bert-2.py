@@ -26,7 +26,7 @@ class MaskFiller:
     async def __call__(self, http_request: Request) -> Dict:
         try:
             # Attempt to get the request body as JSON
-            request_dataL: str = await http_request.json()
+            request_data: str = await http_request.json()
             result = self.fill_mask(request_data)
             return {"filled_text": result}
 
