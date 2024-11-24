@@ -27,7 +27,7 @@ class MaskFiller:
         try:
             # Attempt to get the request body as JSON
             request_data = await http_request.json()
-            result = self.fill_mask(request_data.text)
+            result = self.fill_mask("The flower is [MASK]")
             return {"filled_text": result}
 
         except Exception as e:
